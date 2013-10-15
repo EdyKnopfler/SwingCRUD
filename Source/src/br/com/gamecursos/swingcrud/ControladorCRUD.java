@@ -144,7 +144,12 @@ public class ControladorCRUD<T> {
             return;
          
          int selecionado = tabela.getSelectedRow();
-         if (selecionado != -1) painelCampos.exibir(tableModel.get(selecionado));
+         
+         if (selecionado != -1) 
+            painelCampos.exibir(tableModel.get(selecionado));
+         else
+            painelCampos.limpar();
+         
          habilitarEdicao(false);
          
          crudListener.aposBotaoCancelar();
