@@ -57,10 +57,7 @@ public class ControladorCRUD<T> {
       cancelar.setEnabled(habilitar);
       excluir.setEnabled(!habilitar && temLinhaSelecionada);
       
-      if (habilitar)
-         painelCampos.habilitarCampos();
-      else
-         painelCampos.desabilitarCampos();
+      painelCampos.habilitarCampos(habilitar);
    }
    
    private class AcaoIncluir implements ActionListener {

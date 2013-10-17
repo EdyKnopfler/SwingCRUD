@@ -111,22 +111,13 @@ public class PainelContato extends PainelCampos<Contato> {
    }
 
    @Override
-   public void habilitarCampos() {
+   public void habilitarCampos(boolean habilitar) {
       // Aqui eu habilito os campos
-      nome.setEditable(true);
-      telefone.setEditable(true);
-      nascimento.setEditable(true);
+      nome.setEditable(habilitar);
+      telefone.setEditable(habilitar);
+      nascimento.setEditable(habilitar);
    }
-
-   @Override
-   public void desabilitarCampos() {
-      // Aqui eu desabilito os campos.
-      // O controlador começa em modo não editável.
-      nome.setEditable(false);
-      telefone.setEditable(false);
-      nascimento.setEditable(false);
-   }
-   
+  
    public void focoEmNome() {
       nome.requestFocus();
    }
